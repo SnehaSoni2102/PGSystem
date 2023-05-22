@@ -1,0 +1,107 @@
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+    <!-- Configuration for the default package. -->
+   <package name="default" extends="struts-default">
+    
+       <action name="signup" class="mypack.Signup">
+        <result name="success">signup.jsp</result>
+        <result name="error">signup.jsp</result>
+       </action> 
+        <action name="login" class="mypack.Login">
+    <result name="admin">admin_home.jsp</result>
+        <result name="error">login.jsp</result>
+         <result name="customer">customer_home.jsp</result>
+          <result name="owner">owner_home.jsp</result>
+       
+       </action> 
+       
+   <action name="deluser" class="mypack.Users" method="del">
+    <result name="success">del_user.jsp</result>
+        <result name="error">admin_home.jsp</result>
+       </action> 
+    
+<action name="deluser1" class="mypack.Users" method="del1">
+    <result name="success">del_user.jsp</result>
+        <result name="error">admin_home.jsp</result>
+  </action> 
+       
+  <action name="edituser" class="mypack.Users" method="del">
+    <result name="success">edit_user.jsp</result>
+        <result name="error">admin_home.jsp</result>
+       </action> 
+    
+<action name="edituser1" class="mypack.Users" method="edit">
+    <result name="input">edit_user.jsp</result>
+    <result name="success">edit_user1.jsp</result>
+        <result name="error">admin_home.jsp</result>
+  </action> 
+<action name="edituser2" class="mypack.Users" method="edit1">
+    <result name="success">edit_user1.jsp</result>
+        <result name="error">admin_home.jsp</result>
+  </action> 
+  <action name="addpg" class="mypack.Add_Pg" >
+    <result name="success">add_pg.jsp</result>
+        <result name="error">add_pg.jsp</result>
+  </action> 
+     
+     <action name="postpg" class="mypack.Post_Pg" >
+    <result name="success">post_pg.jsp</result>
+        <result name="error">post_pg.jsp</result>
+  </action> 
+                                                   
+      <action name="delpg" class="mypack.Pg" method="del">
+            <result name="success">del_pg.jsp</result>
+            <result name="error">admin_home.jsp</result>            
+        </action>
+        <action name="delpg1" class="mypack.Pg" method="del1">
+            <result name="success">del_pg.jsp</result>
+            <result name="error">admin_home.jsp</result>            
+        </action>
+        <action name="editpg" class="mypack.Pg" method="edit">
+            <result name="success">edit_pg.jsp</result>
+            <result name="error">admin_home.jsp</result>            
+        </action>
+        <action name="editpg1" class="mypack.Pg" method="edit">
+            <result name="input">edit_pg.jsp</result>
+            <result name="success">edit_pg1.jsp</result>
+            <result name="error">admin_home.jsp</result>            
+        </action>
+        <action name="editpg2" class="mypack.Pg" method="edit1">
+            <result name="success">edit_pg1.jsp</result>
+            <result name="error">admin_home.jsp</result>            
+        </action>
+    
+   <action name="searchpg" class="mypack.Search_Pg" >
+            <result name="success">search_pg1.jsp</result>
+            <result name="error">admin_home.jsp</result>            
+   </action>
+                      
+   <action name="logout" class="mypack.Logout">
+       <result name="success">login.jsp</result>
+   </action>
+                       
+   <action name="verify" class="mypack.Pg" method="verify">
+<result name="success">verify_property.jsp</result>
+   </action>
+     <action name="verify1" class="mypack.Pg" method="verify1">
+<result name="success">verify_property.jsp</result>
+   </action>
+     
+<action name="changestatus" class="mypack.OwnerPg" method="status">
+            <result name="success">changestatus.jsp</result>
+            <result name="error">owner_home.jsp</result>            
+  </action>
+    <action name="bk" class="mypack.OwnerPg" method="book">
+            <result name="success">changestatus.jsp</result>
+            <result name="error">owner_home.jsp</result>            
+    </action>              
+  <action name="vk" class="mypack.OwnerPg" method="vacant">
+            <result name="success">changestatus.jsp</result>
+            <result name="error">owner_home.jsp</result>            
+  </action>                                     
+          
+    </package>
+</struts>
